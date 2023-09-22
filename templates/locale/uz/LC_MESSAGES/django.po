@@ -1,0 +1,2 @@
+msgid "English Text"
+msgstr "O'zbekcha matn"

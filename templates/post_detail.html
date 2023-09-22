@@ -1,0 +1,71 @@
+<!--{% block title %}-->
+<!--    <h2 style="color: blue;"><a href="{% url 'base' %}">Info Page</a></h2>-->
+<!--{% endblock %}<br>-->
+
+<!--    <div class="person-card">-->
+<!--        <h2 class="name" style="color: blue;">{{ object.full_name }}</h2>-->
+<!--        <h2 class="age" style="color: green;">Age: {{ object.age }}</h2>-->
+<!--        <h2 class="birthday" style="color: red;">Birthday: {{ object.birthday }}</h2>-->
+<!--        <h2 class="ish_joyi">Ish_Joyi: {{ object.ish_joyi }}</h2>-->
+<!--    </div>-->
+
+<!--<a href="{% url 'post_delete' object.pk %}" style="font-size: 20px; color: blue;">Postni o'chirish</a><br><br>-->
+<!--<a href="{% url 'base' %}" style="font-size: 20px; color: blue;">Home</a>-->
+
+
+<title>Info Page</title>
+
+<h2 style="color: blue;"><a href="{% url 'base' %}">Info Page</a></h2>
+  <div class="person-card">
+    <h2 class="name" style="color: blue;">{{ object.full_name }}</h2>
+    <h2 class="age" style="color: green;">Age: {{ object.age }}</h2>
+    <h2 class="birthday" style="color: red;">Birthday: {{ object.birthday }}</h2>
+    <h2 class="ish_joyi">Ish_Joyi: {{ object.ish_joyi }}</h2>
+    <h2 class="ish_joyi" style="color: lime">He's info: {{ object.info }}</h2>
+  </div>
+
+  <a href="{% url 'post_delete' object.pk %}" style="font-size: 20px; color: blue;">Postni o'chirish</a> ||
+  <a href="{% url 'post_edit' object.pk %}" style="font-size: 20px; color: blue;">Postni taxrirlash</a><br><br>
+  <a href="{% url 'base' %}" style="font-size: 20px; color: blue;">Home</a>
+
+<style>
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+.person-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.name {
+  color: blue;
+}
+
+.age {
+  color: green;
+}
+
+.birthday {
+  color: red;
+}
+
+a {
+  font-size: 20px;
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
